@@ -121,7 +121,7 @@ main {
     color: var(--desaturated_blue);
 }
 
-.filter_time span[active="true"] {
+.filter_time span[active] {
     color: white;
 }
 
