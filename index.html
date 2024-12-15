@@ -1,80 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
 
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <main>
+    <section class="wrapper">
+      <!-- profile -->
+      <div class="profile item1">
+        <img src="./images/image-jeremy.png" alt="avatar">
+        <span> Report for</span>
+        <h1> Jeremy Robson</h1>
+        <div class="filter_time">
+          <span active="true"> Daily</span>
+          <span active="false"> Weekly</span>
+          <span active="false"> Monthly</span>
+        </div>
+      </div>
+      <!-- end profile -->
+      <!-- Work -->
+      <div class="card item2">
+        <div class="background">
+          <img src="./images/icon-work.svg" alt="Work">
+        </div>
+        <div class="card_header">
+          <h2> Work</h2>
+          <img src="./images/icon-ellipsis.svg" alt="action">
+        </div>
+        <span class="time"> 5hrs</span>
+        <span class="time_old"> <span>Previous</span> - 7hrs</span>
+      </div>
+      <!-- end work -->
 
-  Report for
-  Jeremy Robson
+      <!-- Play -->
+      <div class="card item3">
+        <div class="background">
+          <img src="./images/icon-play.svg" alt="Play">
+        </div>
+        <div class="card_header">
+          <h2> Play</h2>
+          <img src="./images/icon-ellipsis.svg" alt="action">
+        </div>
+        <span class="time"> 1hr</span>
+        <span class="time_old"> <span>Previous</span> - 2hrs</span>
+      </div>
+      <!-- end Play -->
+      <!-- Study -->
+      <div class="card item4">
+        <div class="background">
+          <img src="./images/icon-study.svg" alt="Study">
+        </div>
+        <div class="card_header">
+          <h2> Study</h2>
+          <img src="./images/icon-ellipsis.svg" alt="action">
+        </div>
+        <span class="time"> 0hrs</span>
+        <span class="time_old"> <span>Previous</span> - 1hr</span>
+      </div>
+      <!-- end Study -->
+      <!-- Exercise -->
+      <div class="card item5">
+        <div class="background">
+          <img src="./images/icon-exercise.svg" alt="Exercise">
+        </div>
+        <div class="card_header">
+          <h2> Exercise</h2>
+          <img src="./images/icon-ellipsis.svg" alt="action">
+        </div>
+        <span class="time"> 1hr</span>
+        <span class="time_old"> <span>Previous</span> - 1hr</span>
+      </div>
+      <!-- end Exercise -->
+      <!-- Social -->
+      <div class="card item6">
+        <div class="background">
+          <img src="./images/icon-social.svg" alt="Social">
+        </div>
+        <div class="card_header">
+          <h2> Social</h2>
+          <img src="./images/icon-ellipsis.svg" alt="action">
+        </div>
+        <span class="time"> 1hr</span>
+        <span class="time_old"> <span>Previous</span> - 3hrs</span>
+      </div>
+      <!-- end Social -->
+      <!-- Self Care -->
+      <div class="card item7">
+        <div class="background">
+          <img src="./images/icon-self-care.svg" alt="Self Care">
+        </div>
+        <div class="card_header">
+          <h2> Self Care</h2>
+          <img src="./images/icon-ellipsis.svg" alt="action">
+        </div>
+        <span class="time"> 0hrs</span>
+        <span class="time_old"> <span>Previous</span> - 1hr</span>
+      </div>
+      <!-- end Self Care -->
+    </section>
+  </main>
 
-  Daily
-  Weekly
-  Monthly
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./script.js"></script>
 </body>
+
 </html>
