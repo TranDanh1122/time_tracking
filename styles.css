@@ -129,7 +129,9 @@ main {
     position: relative;
     z-index: 1;
     height: 200px;
+    cursor: pointer;
 }
+
 
 .card .card_header {
     display: flex;
@@ -193,6 +195,10 @@ main {
     border-radius: 1rem;
 }
 
+.card_content:hover {
+    background-color: hsl(236, 41%, 34%);
+}
+
 @media (max-width:1024px) {
 
     html,
@@ -245,7 +251,7 @@ main {
     }
 
     .wrapper {
-        grid-template: repeat(8, minmax(160px , 1fr)) / 1fr;
+        grid-template: repeat(8, minmax(160px, 1fr)) / 1fr;
         row-gap: 6rem;
         column-gap: 6rem;
     }
