@@ -25,3 +25,255 @@ body {
     font-size: 16px;
     font-family: "Rubik", sans-serif;
 }
+
+main {
+    background-color: var(--very_dark_blue);
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template: repeat(2, minmax(255px, 1fr)) / repeat(4, minmax(255px, 1fr));
+    gap: 1.5rem;
+    max-width: 1120px;
+    align-items: flex-end;
+}
+
+.item1 {
+    grid-area: 1/1/3/2;
+}
+
+.item2 .background {
+    background-color: var(--light_red_work);
+}
+
+.item3 .background {
+    background-color: var(--soft_blue_play);
+}
+
+.item4 .background {
+    background-color: var(--light_red_study);
+}
+
+.item5 .background {
+    background-color: var(--lime_green_exercise);
+}
+
+.item6 .background {
+    background-color: var(--violet_social);
+}
+
+.item7 .background {
+    background-color: var(--soft_orange_self_care);
+}
+
+.profile {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--dark_blue);
+}
+
+.profile .info {
+    padding: 2rem;
+    background-color: var(--blue);
+    border-radius: 1rem;
+}
+
+.info span {
+    color: var(--pale_blue);
+    display: block;
+    margin-top: 2.75rem;
+    margin-bottom: .5rem;
+}
+
+.info h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 5rem;
+}
+
+.info img {
+    width: 5rem;
+    height: 5rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.profile .filter_time {
+    padding-left: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.filter_time span {
+    cursor: pointer;
+    font-size: 1.125rem;
+    color: var(--desaturated_blue);
+}
+
+.filter_time span[active="true"] {
+    color: white;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    height: 200px;
+}
+
+.card .card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_header h2 {
+    font-size: 1.125rem;
+}
+
+.card_header img {
+    width: 1.5rem;
+    height: 0.35rem;
+    object-fit: cover;
+}
+
+.card .time {
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.card .time_old {
+    color: var(--pale_blue);
+}
+
+.card .background {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -30%;
+    left: 0;
+    z-index: -1;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+
+.card .background img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+.card .card_content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--dark_blue);
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+@media (max-width:1024px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        grid-template: repeat(4, 1fr) / 1fr 1fr;
+        width: 90%;
+        align-items: center;
+        row-gap: 6rem;
+        column-gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .item1 {
+        grid-area: 1/1/span 2/span 2;
+        transform: translateY(50%);
+    }
+
+    .profile .info {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .name_group {
+        flex-basis: 50%;
+    }
+
+    .profile .filter_time {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        padding-left: unset;
+    }
+
+    .info h1,
+    .info span {
+        margin: unset;
+    }
+}
+
+@media (max-width:767px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        grid-template: repeat(8, minmax(160px , 1fr)) / 1fr;
+        row-gap: 6rem;
+        column-gap: 6rem;
+    }
+
+    .item1 {
+        grid-area: 1/1/span 2/span 1;
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    .card_content {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+
+    .card_body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card .time,
+    .card .time_old {
+        margin-top: unset;
+        margin-bottom: unset;
+
+    }
+}
